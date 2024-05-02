@@ -1,0 +1,60 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: lightyellow;
+    margin: 0; /* Убрать отступы */
+    padding: 0; /* Убрать отступы */
+}
+ 
+/* ... остальные стили ... */
+ 
+.article {
+    display: flex; /* Использовать flexbox для расположения элементов */
+    background-color: #fcac01c8;
+    border: 3px solid darkred;
+    border-radius: 50px 0 50px 0;
+    padding: 10px;
+    margin: 20px; /* Отступ со всех сторон */
+    align-items: center; /* Выровнять элементы по центру по вертикали */
+}
+ 
+ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 50;
+    margin: 100;
+}
+
+.article h2 {
+    font-weight: bold;
+    margin: 0; /* Убрать отступ */
+    padding: 1px;
+    text-align: left; /* Выровнять текст по левому краю */
+}
+ 
+.image-container {
+    margin-top: 15px; /* Отступ сверху от контейнера изображения */
+    margin-right: 20px; /* Отступ справа от контейнера изображения */
+
+}
+ 
+.image-container img {
+    width: auto; /* Ширина изображения будет автоматической */
+    height: auto; /* Высота изображения будет автоматической */
+    max-width: 200px; /* Максимальная ширина изображения */
+    max-height: 100%; /* Максимальная высота изображения */
+}
+ 
+.separator {
+    height: 1px;
+    width: 100%;
+    background-image: repeating-linear-gradient(to right, red 0, red 1px, transparent 1px, transparent 2px);
+    margin-top: 20px;
+}
+ 
+footer {
+    background-color: lightyellow;
+    padding: 10px;
+    text-align: center;
+    width: 100%; /* Ширина на весь экран */
+    position: fixed; /* Фиксированное положение */
+    bottom: 0; /* Расположение внизу страницы */
+}

@@ -1,0 +1,105 @@
+/* NavigationStyles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 40;
+    padding: 50;
+    background-color: lightyellow;
+}
+
+header {
+    background-color: lightyellow;
+    color: white;
+    text-align: center;
+}
+
+nav {
+    width: 200px; /* Ширина навигационного блока */
+    padding-left: 50px; /* Отступ слева */
+}
+
+ul {
+    list-style-type: none; /* Убираем маркеры списка */
+    padding: 0;
+    margin: 100;
+}
+
+li {
+    margin-bottom: 10px; /* Отступ между пунктами списка */
+}
+
+li img {
+    vertical-align: middle; /* Выравнивание изображений по вертикали */
+    margin-right: 10px; /* Отступ между изображением и текстом */
+}
+
+a {
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    color: #fc0404ba; /* Цвет текста ссылок */
+}
+
+.separator {
+    height: 1px;
+    width: 100%;
+    background-image: repeating-linear-gradient(to right, red 0, red 1px, transparent 1px, transparent 2px);
+    margin-top: 20px;
+}
+
+
+.logo-container {
+    text-align: center; /* Выравнивание по центру */
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.article {
+    background-color: #fcac01c8; /* Оранжевый цвет фона с прозрачностью 25% */
+    border: 3px solid darkred; /* Рамка толщиной 1 пиксель темно-красного цвета */
+    border-radius: 50px 0 50px 0; /* Округление углов */
+    padding: 10px;
+    margin-top: 10px; /* Отступ сверху */
+}
+
+
+.article h2 {
+    font-weight: bold; /* Жирное форматирование заголовка */
+    margin-top: 0; /* Убираем отступ сверху у заголовка */
+    text-align: center; /* Выравниваем заголовок по центру */
+    padding: 1px; /* Добавляем внутренний отступ заголовку */
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.content-container {
+    margin-top: 1px; /* Отступ сверху */
+    display: flex; /* Используем flexbox */
+    align-items: center; /* Выравниваем элементы по вертикали */
+}
+
+.image-container {
+    width: 230px; /* Ширина контейнера изображения */
+    height: 230px; /* Высота контейнера изображения */
+    background-image: url('bang.jpg'); /* Путь к изображению */
+    border-radius: 50px 0 50px 0; /* Округление углов */
+    background-size: cover; /* Заполнение контейнера изображением */
+    margin-left: 80px; /* Отступ слева от изображения */
+}
+
+.article p {
+    margin-left: 30px; /* Отступ с правого края */
+    margin-top: 1; /* Убираем отступ сверху у абзаца */
+    flex: 1; /* Растягиваем текст на всю доступную ширину */
+    font-size: 24px; /* Устанавливаем размер шрифта */
+}
+
+
+
+/* Ваши текущие стили */
+footer {
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: lightyellow;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+}

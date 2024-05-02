@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Hier is mijn JS #2 oefening bij Intec waarvan ik de menu van een restaurant hebt gedaan met html, css en js">
+    <meta name="keywords" content="css, krokantje, intec">
+    <meta name="author" content="Raphael">
+    <link rel="stylesheet" href="src/css/style.css">
+    <title>Krokantje</title>
+</head>
+
+<body>
+    <div id="container">
+
+        <!---HEADER-->
+        <header>
+            <h1>RESTAURANT HET KROKANTJE</h1>
+        </header>
+
+        <!---SECTION-->
+        <section id="beschrijving">
+            <div>   
+                <video autoplay loop muted>                    
+                    <source src="src/media/videonosound.mp4" type="video/mp4">
+                </video>               
+            </div>  
+        </section>  
+
+        <!---SECTION-->
+        <section id="menu"> 
+            
+            <div class="options">
+                <h4>GANG </h4>  
+                <select name="gang" id="gang">
+                    <option value="Voorgerechten">Voorgerechten</option>
+                    <option value="Hoofdgerechten">Hoofdgerechten</option>
+                    <option value="Desserts">Desserts</option>
+                  </select>       
+            </div> 
+
+            <div class="options">
+                <h4>KEUZE </h4>  
+                <select name="keuze" id="keuze" size="8">                        
+                    <option value="Sprinkhaan">Sprinkhaan</option>
+                    <option value="Tandoori Burger">Tandoori Burger</option>
+                    <option value="Cupcake">Cupcake</option>                
+                </select>    
+            </div>  
+
+            <div class="options">
+                <h4>AANTAAL &nbsp;</h4>   
+                <input name="aantaal" id="aantaal" type="number" value="0" min="0" max="10">         
+            </div>   
+            
+            <div class="options">
+                <input type="submit" id="order-button" value="BESTEL">
+            </div> 
+        </section>  
+
+        <!---SECTION-->
+        <section id="bestelling">               
+        </section>  
+
+         
+        <!--Footer-->
+        <footer>
+            <img src="src/media/home.png" id="homeicone">
+            <img src="src/media/pause.png" id="audioicone"> 
+        </footer>
+ 
+    </div>
+</body>
+<script src="src/js/script.js"></script>   
+</html>

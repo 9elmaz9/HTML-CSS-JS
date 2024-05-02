@@ -1,0 +1,29 @@
+/* extraStyles.css */
+
+.table1, .table2 {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table1 caption, .table2 caption {
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.table1 th, .table2 th {
+    background-color: #32a4e6;
+    color: white;
+    padding: 10px;
+    text-align: left;
+}
+
+.table1 td, .table2 td {
+    padding: 10px;
+    border: 1px solid #ddd;
+}
+
+.table1 tbody tr:nth-child(even), .table2 tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

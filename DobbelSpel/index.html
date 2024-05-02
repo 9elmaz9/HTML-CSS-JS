@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dobbelspel</title>
+    <style>
+        /* CSS-стили здесь */
+        #diceContainer {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        #diceContainer img {
+            width: 100px;
+            height: 100px;
+            margin: 5px;
+        }
+
+        #statistics {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #statistics li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Dobbelspel</h1>
+    <button id="rollButton">Dobbel</button>
+    <p>Aantal worpen: <span id="rollCount">0</span></p>
+    <h2>Statistieken</h2>
+    <ul id="statistics">
+        <li>Dubbel: <span id="doubleCount">0</span></li>
+        <li>Trio: <span id="tripleCount">0</span></li>
+        <li>Quattro: <span id="quadrupleCount">0</span></li>
+        <li>Cinquo: <span id="quintupleCount">0</span></li>
+    </ul>
+    <div id="diceContainer"></div>
+
+    <script>
+        // JavaScript-код здесь
+        // Variabelen om het aantal worpen en scores bij te houden
+        let rollCount = 0;
+        let doubleCount = 0;
+        let tripleCount = 0;
+        let quadrupleCount = 0;
+        let quintupleCount = 0;
+
+        // Eventlistener voor het klikken op de dobbel knop
+        document.getElementById('rollButton').addEventListener('click', rollDice);
+
+        // Functie om de dobbelstenen te rollen en resultaten weer te geven
+        function rollDice() {
+            // Verhoog het aantal worpen
+            rollCount++;
+            document.getElementById('rollCount').textContent = rollCount;
+
+            // Gooi 5 dobbelstenen
+            const diceResults = [];
+            for (let i = 0; i < 5; i++) {
+                const roll = Math.floor(Math.random() * 6) + 1;
+                diceResults.push(roll);
+            }
+
+            // Bereken de score
+            const score = calculateScore(diceResults);
+
+            // Toon de dobbelstenen en update de statistieken
+            displayDice(diceResults);
+            updateStatistics(score);
+        }
+
+        // Functie om de score te berekenen op basis van de worpresultaten
+        function calculateScore(results) {
+            const counts = {};
+            for (const result of results) {
+                counts[result] = (counts[result] || 0) + 1;
+            }
+
+            // Check voor dubbel, trio, quattro en cinquo
+            let score = 'Geen score';
+            for (const count of Object.values(counts)) {
+                if (count === 2) {
+                    score = 'Dubbel';
+                    doubleCount++;
+                } else if (count === 3) {
+                    score = 'Trio';
+                    tripleCount++;
+                } else if (count === 4) {
+                    score = 'Quattro';
+                    quadrupleCount++;
+                } else if (count === 5) {
+                    score = 'Cinquo';
+                    quintupleCount++;
+                }
+            }
+            return score;
+        }
+
+        // Functie om de dobbelstenen weer te geven op de pagina
+        function displayDice(results) {
+            const diceContainer = document.getElementById('diceContainer');
+            diceContainer.innerHTML = '';
+            for (const result of results) {
+                const img = document.createElement('img');
+                img.src = `Dice/dice${result}.jpg`;
+                diceContainer.appendChild(img);
+            }
+        }
+
+        // Functie om de statistieken bij te werken op de pagina
+        function updateStatistics(score) {
+            document.getElementById('statistics').innerHTML = `
+                <li>Dubbel: <span>${doubleCount}</span></li>
+                <li>Trio: <span>${tripleCount}</span></li>
+                <li>Quattro: <span>${quadrupleCount}</span></li>
+                <li>Cinquo: <span>${quintupleCount}</span></li>
+            `;
+        }
+    </script>
+</body>
+</html>

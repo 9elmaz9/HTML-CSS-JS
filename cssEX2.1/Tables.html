@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extra tabellen</title>
+    <link rel="stylesheet" href="extraStyles.css">
+</head>
+
+<body>
+    <header>
+        <h1>Tabellen</h1>
+    </header>
+    <main>
+        <table class="table1">
+            <caption>Table 1</caption>
+            <tr>
+                <td class="left">A</td>
+                <td class="center">B</td>
+                <td class="right">C</td>
+            </tr>
+            <tr>
+                <td class="left">D</td>
+                <td class="center">E</td>
+                <td class="right">F</td>
+            </tr>
+        </table>
+
+        <table class="table2">
+            <caption>Table 2</caption>
+            <tr>
+                <td colspan="3" class="center">Tweede tabel</td>
+            </tr>
+            <tr>
+                <td class="left">A</td>
+                <td class="center">B</td>
+                <td class="right">C</td>
+            </tr>
+            <tr>
+                <td class="left">D</td>
+                <td class="center">E</td>
+                <td class="right">F</td>
+            </tr>
+        </table>
+        <table class="table1 table3"> <!-- Добавлен класс table3 -->
+            <caption>Table 3</caption>
+            <tr>
+                <td rowspan="2">Tabel Drie</td>
+                <td class="left">A</td>
+                <td class="center">B</td>
+                <td class="right">C</td>
+            </tr>
+            <tr>
+                <td class="left">D</td>
+                <td class="center">E</td>
+                <td class="right">F</td>
+            </tr>
+        </table>
+
+        <table class="table1 table4">
+            <caption>Table 4</caption>
+            <tr>
+                <td class="left">A</td>
+                <td class="center">B</td>
+                <td class="right">C</td>
+            </tr>
+            <tr>
+                <td class="left">D</td>
+                <td class="center">E</td>
+                <td class="right">F</td>
+            </tr>
+            <tr>
+                <td class="left">G</td>
+                <td class="center">H</td>
+                <td class="right">I</td>
+            </tr>
+        </table>
+        
+    </main>
+    <footer>
+        <p>© 2024 Superhero Inc.</p>
+        <p>Bron: geeks.media</p>
+    </footer>
+</body>
+
+</html>
